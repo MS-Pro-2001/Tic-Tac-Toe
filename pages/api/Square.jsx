@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@mui/material";
 
-const Square = ({indexposition}) => {
-    console.log(indexposition)
+const Square = ({indexposition,onClick,winner}) => {
+  let flag = false;
+  
+  if(winner){
+    // console.log(winner)
+    flag = true;
+
+  }
+
+  
+    
   return (
     <div>
-      <Button variant="contained" style={{ width: "96%",height:'100px' }}>
+      <Button variant="contained" disabled={flag}  style={{ width: "96%",height:'100px' }}  onClick={()=>{onClick()}} >
       <div className="h1" >{indexposition}</div>
       </Button>
     </div>

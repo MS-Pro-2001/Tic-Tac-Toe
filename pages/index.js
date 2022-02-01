@@ -8,7 +8,7 @@ export default function Home() {
     <>
     <h1 className="text-center" >Tic Tac Toe</h1>
       <Board />
-      <h4 className="text-center" >WINNER:</h4>
+      
     </>
   );
 }
